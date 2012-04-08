@@ -6,8 +6,8 @@ class Trainer (fileName: String) {
   // compute the features of a specified sentence
   private def featuresOfSentence(previous: Array[String],
       words: List[Array[String]]): List[String] = {
-    if (words.isEmpty) Nil
-    else computeFeature(previous, words.head)::featuresOfSentence(words.head, words.tail)
+    if (words.tail.isEmpty) Nil
+    else computeFeature(previous, words.head, words.tail.head)::featuresOfSentence(words.head, words.tail)
   }
 
   def getFeatureVectors(): List[String] = {
