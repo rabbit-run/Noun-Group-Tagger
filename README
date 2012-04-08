@@ -1,2 +1,39 @@
-This is a homework lab of natrual language processing.
+########################################
+#                                  #####
+# Homework Assignment #5           #####
+#   Zehua Mai N15096707            #####
+#                                  #####
+########################################
 
+Files contained:
+
+README      This file
+conlleval   Scorer
+train.np    Training File
+dev.np      The given test file
+run         a script to run the program
+src/        directory for source files
+lib/        directory for class files
+external_jar    directory for external jar file
+
+#########################################
+
+To run the program:
+
+$: chmod +x run
+$: ./run [name of the test file]
+
+example:
+
+$: ./run dev.np
+
+It takes about 10s to run the program on my computer.
+
+The program will then produce a dev.prediction file, 
+which is the result. 
+
+#########################################
+
+To check the score:
+
+$: ./conlleval < dev.prediction

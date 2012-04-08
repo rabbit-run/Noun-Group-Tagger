@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# != 1 ]
+then
+	echo "Usage: ./run [name of test file]"
+else
+	scala -classpath lib:external_jar/maxent-3.0.0.jar driver $1
+fi
+
+
+
